@@ -53,6 +53,7 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
         fontSize: '24px',
         color: '#FF6060',
         padding: '18px',
+        borderRadius: '10px',
     };
     
     return (

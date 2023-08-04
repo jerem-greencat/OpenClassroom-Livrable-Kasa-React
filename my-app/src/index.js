@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import {  createBrowserRouter,  RouterProvider,} from "react-router-dom";
 import Home from './Components/Home';
 import About from './Components/About';
+import NotFound from './Components/NotFound';
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/a-propos",
     element: <About/>,
+  },
+  {
+    path: "*",
+    element: <NotFound/>,
   },
 ]);
 
