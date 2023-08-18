@@ -41,7 +41,7 @@ function DataProcess() {
     return(
         <div style={locationListingStyle}>
         {JsonData.map((item) => (
-            <a style={locationCardStyle} key={item.id} href={item.id}>
+            <a style={locationCardStyle} key={item.id} href={"fiche?id=" + item.id}>
             <img src={item.cover} alt={item.title} style={locationImageStyle} />
             <p style={locationTitleStyle}>{item.title}</p>
             </a>
