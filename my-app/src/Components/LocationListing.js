@@ -1,6 +1,8 @@
-import React from 'react';
+import React  from 'react';
 
-const LocationListing = ({ locationsData}) => {
+import JsonData from '../locations.json';
+
+function DataProcess() {
     const locationListingStyle = {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
@@ -32,20 +34,21 @@ const LocationListing = ({ locationsData}) => {
         left: '20px',
         color: '#fff',
         fontSize: '18px',
-        fontWeight:'500',
+        fontWeight: '500',
         width: '300px',
     };
     
-    return (
-        <div style={{ ...locationListingStyle }}>
-        {locationsData.map((location) => (
-            <div style={{ ...locationCardStyle }} key={location.id}>
-            <img src={location.imageUrl} alt={location.title} style={locationImageStyle} />
-            <p style={locationTitleStyle}>{location.title}</p>
-            </div>
+    return(
+        <div style={locationListingStyle}>
+        {JsonData.map((item) => (
+            <a style={locationCardStyle} key={item.id} href={item.id}>
+            <img src={item.cover} alt={item.title} style={locationImageStyle} />
+            <p style={locationTitleStyle}>{item.title}</p>
+            </a>
             ))}
             </div>
-            );
-        };
-        
-        export default LocationListing;
+            )
+            
+        }
+
+        export default DataProcess;
