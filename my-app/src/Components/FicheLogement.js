@@ -78,6 +78,8 @@ function FicheLogement() {
     
     const logoPath = '/img/LOGO_WHITE.png'; 
     
+    
+
     return (
         <div>
         <div className="main_contenair">

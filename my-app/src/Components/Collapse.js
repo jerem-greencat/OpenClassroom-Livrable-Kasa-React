@@ -52,6 +52,18 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
         borderRadius: '10px',
     };
     
+    // console.log(typeof collapseData.answer);
+
+    const getType = (item) => {
+        if (typeof item.answer === 'string') {
+            console.log('String');
+        } else {
+            console.log('Object')
+            console.log(typeof item.answer);
+        }
+    }
+
+
     return (
         <div>
         {collapseData.map((item) => (
@@ -65,7 +77,15 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
             />
             </div>
             {openMenuIds.includes(item.id) && (
-                <div style={answerStyle}>{item.answer}</div>
+                <div style={answerStyle}>
+
+                    {getType(item)}
+
+                {/* {item.answer.typeof === 'String' ? console.log('String') : console.log('Object')} */}
+
+
+                    
+                    {item.answer} {typeof item.answer}</div>
                 )}
                 </div>
                 ))}
