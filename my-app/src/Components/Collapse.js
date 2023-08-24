@@ -8,9 +8,6 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
     
     // Fonction pour gérer le clic sur un menu
     const handleMenuClick = (id) => {
-        // Vérifier si l'ID du menu est déjà dans le tableau openMenuIds
-        // Si oui, le menu est déjà ouvert, nous le fermons en le retirant du tableau
-        // Sinon, le menu est fermé, nous l'ouvrons en l'ajoutant au tableau
         setOpenMenuIds((prevOpenMenuIds) =>
         prevOpenMenuIds.includes(id)
         ? prevOpenMenuIds.filter((menuId) => menuId !== id)
@@ -18,14 +15,13 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
         );
     };
     
-    const aboutStyle = {
-        width: '80%',
+
+    const aboutSlideStyle = {
+        width: '40vw',
         maxWidth: '1023px',
         margin: '30px auto',
         borderRadius: '8px',
-    };
-
-    const aboutSlideStyle = {
+        height: '100%',
         marginBottom: '35px',
     }
     
@@ -57,7 +53,7 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
     };
     
     return (
-        <div style={aboutStyle}>
+        <div>
         {collapseData.map((item) => (
             <div style={aboutSlideStyle} key={item.id}>
             <div style={titleStyle} onClick={() => handleMenuClick(item.id)}>

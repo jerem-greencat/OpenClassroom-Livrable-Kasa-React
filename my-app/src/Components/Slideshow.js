@@ -16,7 +16,7 @@ const Slideshow = ({ images, arrowLeftImage, arrowRightImage }) => {
     const slideshowStyles = `
         .slideshow-container {
             position: relative;
-            max-width: 1240px; 
+            width: 100%; 
             margin: 0 auto; 
             margin-top: 100px;
         }
