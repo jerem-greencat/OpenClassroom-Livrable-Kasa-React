@@ -50,7 +50,13 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
         color: '#FF6060',
         padding: '18px',
         borderRadius: '10px',
+        height: '60%'
     };
+
+    const listStyle = {
+        listStyle: 'none',
+        margin: '0'
+    }
 
     const listElementStyle = {
 
@@ -62,12 +68,12 @@ const getType = (item) => {
     if (typeof item.answer === 'string') {
         return (
             <div>
-                {item.answer} {typeof item.answer}
+                {item.answer}
             </div>
         );
     } else {
         return (
-            <ul>
+            <ul style={listStyle}>
                 {item.answer.map((el) => (
                     <li style={listElementStyle}>{el}</li>
                 ))}

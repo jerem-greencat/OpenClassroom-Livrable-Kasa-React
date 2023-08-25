@@ -23,7 +23,11 @@ function FicheLogement() {
 
     const titleContainerStyle = {
         display : 'flex',
-        justifyContent : 'space-between',
+        justifyContent : 'space-between'
+    }
+
+    const titleStyle = {
+        marginBottom : '0'
     }
 
     const ownerStyle = {
@@ -44,7 +48,8 @@ function FicheLogement() {
     
     const localisation = {
             fontWeight: '500',
-            fontSize: '18px'
+            fontSize: '18px',
+            marginTop: '0'
     };
 
     const collapseContainer = {
@@ -56,6 +61,11 @@ function FicheLogement() {
     
     const images = selectedLocation.pictures;
     const ownerName = selectedLocation.host.name;
+    const ownerNameParts = ownerName.split(' ');
+    const firstPart = ownerNameParts[0];
+    const restPart = ownerNameParts.slice(1).join(' ');
+
+
     const ownerPicture = selectedLocation.host.picture;
 
     const tags = selectedLocation.tags;
@@ -92,9 +102,13 @@ function FicheLogement() {
         />
         <Slideshow images={images} arrowLeftImage="/img/arrow_left.png" arrowRightImage="/img/arrow_right.png" />
         <div style={titleContainerStyle}>
-        <h1>{selectedLocation.title}</h1>
+        <h1 style={titleStyle}>{selectedLocation.title}</h1>
         <div style={ownerStyle}>
-        <p style={ownerNameStyle}>{ownerName}</p>
+        <p style={ownerNameStyle}>
+        {firstPart}
+        <br />
+        {restPart}
+        </p>
         <img style={ownerPictureStyle} src={ownerPicture} alt={`${ownerName}'s profile`} className='owner-picture' />
         </div>
         </div>
