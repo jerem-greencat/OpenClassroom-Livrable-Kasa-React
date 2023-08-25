@@ -51,17 +51,31 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
         padding: '18px',
         borderRadius: '10px',
     };
+
+    const listElementStyle = {
+
+    }
     
     // console.log(typeof collapseData.answer);
 
-    const getType = (item) => {
-        if (typeof item.answer === 'string') {
-            console.log('String');
-        } else {
-            console.log('Object')
-            console.log(typeof item.answer);
-        }
+const getType = (item) => {
+    if (typeof item.answer === 'string') {
+        return (
+            <div>
+                {item.answer} {typeof item.answer}
+            </div>
+        );
+    } else {
+        return (
+            <ul>
+                {item.answer.map((el) => (
+                    <li style={listElementStyle}>{el}</li>
+                ))}
+            </ul>
+        );
     }
+};
+
 
 
     return (
@@ -85,7 +99,7 @@ const Collapse = ({ collapseData, arrowDownImg, arrowUpImg }) => {
 
 
                     
-                    {item.answer} {typeof item.answer}</div>
+                    </div>
                 )}
                 </div>
                 ))}
