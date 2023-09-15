@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './header.css'; 
 
 const Header = ({ logoSrc, link1Text, link1Url, link2Text, link2Url }) => {
     const [isHoveredLink1, setIsHoveredLink1] = useState(false);
@@ -21,14 +22,14 @@ const Header = ({ logoSrc, link1Text, link1Url, link2Text, link2Url }) => {
     };
     
     return (
-        <header style={headerStyle}>
-        <div style={logoStyle}>
-        <img src={logoSrc} alt="Logo" style={logoImgStyle} />
+        <header className="header">
+        <div className="logo">
+        <img src={logoSrc} alt="Logo" className="logo-img" />
         </div>
-        <div style={linksStyle}>
+        <div className="links">
         <a
         href={link1Url}
-        style={{ ...linkStyle, textDecoration: isHoveredLink1 ? 'underline' : 'none' }}
+        className={`link ${isHoveredLink1 ? 'hovered' : ''}`}
         onMouseEnter={handleMouseEnterLink1}
         onMouseLeave={handleMouseLeaveLink1}
         >
@@ -36,7 +37,7 @@ const Header = ({ logoSrc, link1Text, link1Url, link2Text, link2Url }) => {
         </a>
         <a
         href={link2Url}
-        style={{ ...linkStyle, textDecoration: isHoveredLink2 ? 'underline' : 'none' }}
+        className={`link ${isHoveredLink2 ? 'hovered' : ''}`}
         onMouseEnter={handleMouseEnterLink2}
         onMouseLeave={handleMouseLeaveLink2}
         >
@@ -45,34 +46,6 @@ const Header = ({ logoSrc, link1Text, link1Url, link2Text, link2Url }) => {
         </div>
         </header>
         );
-    };
-    
-    
-    const headerStyle = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        background: 'white',
-    };
-    
-    const logoStyle = {
-        marginRight: '10px',
-    };
-    
-    const logoImgStyle = {
-        // Style du logo
-    };
-    
-    const linksStyle = {
-        display: 'flex',
-        alignItems: 'center',
-    };
-    
-    const linkStyle = {
-        fontWeight: 500,
-        fontSize: '24px',
-        margin: '0 10px',
-        textDecoration: 'none',
-        color: '#FF6060',
     };
     
     export default Header;

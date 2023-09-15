@@ -1,0 +1,171 @@
+
+/* body {
+    padding: 40px 100px;
+} */
+
+.main_container {
+    margin: 40px 100px;
+    /* width: 100%; */
+    /* padding: 40px 100px; */
+}
+
+.fiche_head_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fiche_title {
+    margin-bottom: 0;
+}
+
+.owner {
+    display: flex;
+    gap: 15px;
+}
+
+.owner-name {
+    margin: auto;
+}
+
+.owner-picture {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin: auto;
+}
+
+.localisation {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.tag_container {
+    display : flex;
+    gap: 5px;
+    align-items : center;
+} 
+
+.tag {
+    background : #FF6060;
+    padding: 5px 35px 1px 35px;
+    height: 25px;
+    color: white;
+    border-radius : 10px;
+    font-size: 14px;
+}
+
+.right_head {
+    align-self: center;
+}
+
+.rate_container {
+    min-width: 205px
+}
+
+.star {
+    width: 36px;
+    height: 36px;
+    margin-right: 5px; 
+}
+
+.collapse-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex: 1 1 auto;
+    gap: 30px;
+}
+
+@media screen and (max-width: 970px) {
+    .fiche_head_container {
+        display: block;
+    }
+    
+    .right_head {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
+    .rate_box {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main_container {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    img.slide_img {
+        height: 255px;
+    }
+    
+    
+    .main_container {
+        margin: 20px;
+    }
+
+    .fiche_head_container {
+        margin-bottom: -10px;
+    }
+    
+    .fiche_title {
+        font-size: 18px;
+    }
+    
+    .localisation {
+        font-size: 14px;
+    }
+    
+    .right_head {
+        margin-top: 15px;
+    }
+
+    .rate_container {
+        min-width: 0;
+    }
+    
+    .star {
+        width: 18px;
+        height: 18px;
+        margin-right: 2px;
+    }
+
+    .owner-name {
+        font-size: 12px;
+    }
+
+    .owner-picture {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .tag {
+        font-size: 10px;
+        height: 18px;
+        padding: 5px 15px 1px 15px;
+    }
+
+    .collapse-container {
+        display: block;
+    }
+
+    .about-slide {
+        width: 100%;
+    }
+
+    .arrow {
+        width: 18px;
+        height: 18px;
+    }
+}

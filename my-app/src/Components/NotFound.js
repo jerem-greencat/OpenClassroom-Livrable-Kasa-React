@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import '../App.css';
+import './notFound.css'; 
+
 import Header from "./Header";
 
 function NotFound() {
-    
     const [isHoveredLink, setIsHoveredLink] = useState(false);
     
     const handleMouseEnterLink = () => {
@@ -14,37 +14,8 @@ function NotFound() {
         setIsHoveredLink(false);
     };
     
-    const numberStyle = {
-        fontSize: '288px',
-        fontWeight: '700',
-        textAlign: 'center',
-        color: '#FF6060',
-        marginTop: '125px',
-        marginBottom:'0',
-    };
-    
-    const errorStyle = {
-        color: '#FF6060',
-        textAlign: 'center',
-        fontSize: '36px',
-        marginTop: '70px',
-    };
-    
-    const linkStyle = {
-        fontWeight: 500,
-        fontSize: '18px',
-        textDecoration: 'none',
-        color: '#FF6060',
-    };
-
-    const linkContainer = {
-        marginTop: '140px',
-        textAlign: 'center',
-    }
-    
     return (
-        <div>
-        <div class="main_contenair">
+        <div className="main_container">
         <Header
         logoSrc="/img/LOGO.jpg"
         link1Text="Accueil"
@@ -53,25 +24,21 @@ function NotFound() {
         link2Url="/a-propos"
         />
         
-        <p style={numberStyle}>404</p>
-        <p style={errorStyle}>Oups! La page que vous demandez n'existe pas.</p>
+        <p className="number">404</p>
+        <p className="error">Oups! La page que vous demandez n'existe pas.</p>
         
-        <p style={linkContainer}>
-        <a 
+        <p className="link_container">
+        <a
         href="/"
-        style={{ ...linkStyle, textDecoration: isHoveredLink ? 'underline' : 'none' }}
+        className={`link ${isHoveredLink ? 'underline' : ''}`}
         onMouseEnter={handleMouseEnterLink}
         onMouseLeave={handleMouseLeaveLink}
         >
         Retourner sur la page d’accueil
         </a>
         </p>
-        
-        
-        </div>
         </div>
         );
     }
-    
     
     export default NotFound;

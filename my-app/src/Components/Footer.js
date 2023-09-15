@@ -1,28 +1,11 @@
 import React from 'react';
+import './footer.css';
 
 const Footer = ({ logoSrc }) => {
-    const footerStyle = {
-        height: '209px',
-        backgroundColor: '#000',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#fff',
-    };
-    
-    const logoStyle = {
-        marginBottom: '30px',
-    };
-    
-    const paragraphStyle = {
-        fontSize: '16px',
-    };
-    
     return (
-        <footer style={footerStyle}>
-        <img src={logoSrc} alt="Logo" style={logoStyle} />
-        <p style={paragraphStyle}>© 2020 Kasa. All rights reserved</p>
+        <footer className="footer">
+        <img src={logoSrc} alt="Logo" className="logo" />
+        <p className="paragraph">© 2020 Kasa. All rights reserved</p>
         </footer>
         );
     };

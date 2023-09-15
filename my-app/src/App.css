@@ -9,3 +9,9 @@ body {
 .main_contenair {
   margin: 40px 100px;
 }
+
+@media screen and (max-width: 1000px ) {
+  .main_contenair {
+    margin: 20px;
+  }
+}

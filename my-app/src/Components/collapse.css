@@ -1,0 +1,60 @@
+.about .about-slide {
+    width: 100%;
+}
+
+.about-slide {
+    width: 40vw;
+    max-width: 1023px;
+    margin: 30px auto;
+    border-radius: 8px;
+    height: 100%;
+    margin-bottom: 35px;
+}
+
+.title {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #FF6060;
+    color: white;
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+.arrow {
+    width: 32px;
+    height: 32px;
+    padding-right: 20px;
+}
+
+.answer {
+    background-color: #F6F6F6;
+    font-size: 24px;
+    color: #FF6060;
+    padding: 18px;
+    border-radius: 10px;
+    height: 60%;
+}
+
+.answer ul {
+    padding: 0;
+}
+
+.list-style {
+    list-style: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 550px) {
+    .title {
+        font-size: 13px;
+    }
+
+    .answer div,
+    .answer ul {
+        font-size: 12px;
+    }
+}
