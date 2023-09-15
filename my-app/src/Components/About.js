@@ -37,8 +37,8 @@ function About() {
     const logoPath = 'img/LOGO_WHITE.png'; 
     
     return (
-        <div class="about">
-        <div class="main_contenair">
+        <div className="about">
+        <div className="main_contenair">
         <Header
         logoSrc="/img/LOGO.jpg"
         link1Text="Accueil"

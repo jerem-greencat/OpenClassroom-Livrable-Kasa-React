@@ -13,7 +13,7 @@ function Home() {
     
     return (
         <div>
-        <div class="main_contenair">
+        <div className="main_contenair">
         <Header
         logoSrc="/img/LOGO.jpg"
         link1Text="Accueil"

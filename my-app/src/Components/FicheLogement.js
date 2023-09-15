@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Header from './Header';
 import Slideshow from './Slideshow';
 import Footer from './Footer';
@@ -118,11 +117,5 @@ function FicheLogement() {
             
             );
         }
-        
-        FicheLogement.propTypes = {
-            images: PropTypes.arrayOf(PropTypes.string).isRequired,
-            arrowLeftImage: PropTypes.string.isRequired,
-            arrowRightImage: PropTypes.string.isRequired,
-        };
         
         export default FicheLogement;
