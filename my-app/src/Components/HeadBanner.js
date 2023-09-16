@@ -1,5 +1,5 @@
 import React from 'react';
-import './headBanner.css'; // Importez le fichier CSS
+import './headBanner.css'; 
 
 const HeadBanner = ({ id, backgroundImage, bannerText }) => {
     return (
