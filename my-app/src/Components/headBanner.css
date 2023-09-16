@@ -39,6 +39,11 @@
         text-align: left;
         justify-content: center;
         margin-top: 15px;
+        height: 111px;
+    }
+
+    .head-banner#about {
+        height: 223px;
     }
 
     .text-style{

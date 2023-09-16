@@ -49,6 +49,7 @@ function About() {
         
         <HeadBanner
         backgroundImage="/img/IMG_BANNER_ABOUT.jpg"
+        id="about"
         />
         
         <Collapse

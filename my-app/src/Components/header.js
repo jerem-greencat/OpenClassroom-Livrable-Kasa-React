@@ -23,9 +23,9 @@ const Header = ({ logoSrc, link1Text, link1Url, link2Text, link2Url }) => {
     
     return (
         <header className="header">
-        <div className="logo">
+        <a href="/" className="logo">
         <img src={logoSrc} alt="Logo" className="logo-img" />
-        </div>
+        </a>
         <div className="links">
         <a
         href={link1Url}
